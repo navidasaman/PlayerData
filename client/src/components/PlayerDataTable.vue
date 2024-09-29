@@ -3,7 +3,7 @@
     <table>
       <thead>
         <tr>
-          <th>Birth date</th>
+          <th>Birth date <font-awesome-icon icon="fa-solid fa-arrow-down" style="color:white" /></th>
           <th>First Name</th>
           <th>Last Name</th>
           <th>City</th>
@@ -65,6 +65,7 @@ table {
   width: 100%;
   width: 70vw;
   overflow-y: auto;
+  margin: auto;
 }
 th {
   font-size: 18px;
@@ -82,8 +83,8 @@ td {
   padding-bottom: 10px;
   background: white;
   color: grey;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 tbody tr:nth-child(odd) td {
@@ -94,15 +95,17 @@ tbody tr:nth-child(even) td {
   background-color: #f2f2f2;
 }
 
-@media (min-width: 300px) and (max-width: 850px) {
+@media (min-width: 411px) and (max-width: 850px) {
   table {
     width: 90vw;
+    overflow-y: auto;
   }
 }
-@media (max-width: 419px) {
+
+@media (min-width: 300px) and (max-width: 409.99px) {
   table {
-    width: 100%;
-    margin-top:5%;
+    width: 90vw;
+    margin-top: calc(30%);
   }
 }
 </style>

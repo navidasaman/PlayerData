@@ -16,6 +16,7 @@ export default {
 <style>
 html, body {
   background: linear-gradient(45deg,#4158d0,#c850c0);
+  margin:auto;
 }
 
 #app {
@@ -26,5 +27,6 @@ html, body {
   align-items: center;
   height: 100vh;
   overflow: auto;
+  margin-bottom:5%;
 }
 </style>
