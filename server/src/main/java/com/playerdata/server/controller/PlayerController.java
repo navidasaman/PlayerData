@@ -21,7 +21,7 @@ public class PlayerController {
         this.playerService = playerService;
     }
 
-    @GetMapping("/get")
+    @GetMapping("/")
     public List<Player> findAllPlayers() {
         return playerService.findAllPlayers();
     }
