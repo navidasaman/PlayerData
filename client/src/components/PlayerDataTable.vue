@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <table border="1">
+    <table>
       <thead>
         <tr>
           <th>Birth date</th>
@@ -24,7 +23,6 @@
         </tr>
       </tbody>
     </table>
-  </div>
 </template>
 
 <script>
@@ -65,6 +63,14 @@ td {
   color: grey;
   padding-left: 5px;
   padding-right: 5px;
+}
+
+tbody tr:nth-child(odd) td {
+  background-color: white; 
+}
+
+tbody tr:nth-child(even) td {
+  background-color: #f2f2f2; 
 }
 
 @media (min-width: 300px) and (max-width: 850px) {
