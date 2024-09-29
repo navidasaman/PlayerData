@@ -1,26 +1,29 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <PlayerDataTable />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import PlayerDataTable from './components/PlayerDataTable.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    PlayerDataTable
   }
 }
 </script>
 
 <style>
+html, body {
+  background: linear-gradient(45deg,#4158d0,#c850c0);
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  font-family:'Open Sans',sans-serif;
+  font-size: 15px;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  height: 100vh;
 }
 </style>
