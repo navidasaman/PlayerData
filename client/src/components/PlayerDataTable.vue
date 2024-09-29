@@ -1,4 +1,5 @@
 <template>
+  <div>
     <table>
       <thead>
         <tr>
@@ -9,25 +10,44 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>1993-09-08</td>
-          <td>John</td>
-          <td>Doe</td>
-          <td>Gothenburg</td>
-        </tr>
-        <tr>
-          <td>1993-09-08</td>
-          <td>John</td>
-          <td>Doe</td>
-          <td>Gothenburg City</td>
+        <tr v-for="player in players" :key="player.id">
+          <td>{{ player.birth_date }}</td>
+          <td>{{ player.first_name }}</td>
+          <td>{{ player.last_name }}</td>
+          <td>{{ player.city }}</td>
         </tr>
       </tbody>
     </table>
+  </div>
 </template>
 
 <script>
 export default {
-  name: "HelloWorld",
+  data() {
+    return {
+      players: [] // will return data that was fetched     
+    };
+  },
+  async mounted() {             // After page has loaded (mounted)
+    await this.fetchPlayers(); //  the fetchPlayers method will run
+  },
+  methods: {
+    // Fetches the player data
+    async fetchPlayers() {
+      try {
+        const response = await fetch('http://localhost:8080/players/');
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        this.players = data; // The JSON-data will be returned in data(){...} if fetch request is successful
+      } catch (error) {
+        this.error = `Error fetching persons data: ${error.message}`;
+        console.error('Error fetching persons:', error);
+        alert(`${error.message}`);
+      }
+    }
+  }
 };
 </script>
 
@@ -44,6 +64,7 @@ table {
   border-collapse: collapse;
   width: 100%;
   width: 70vw;
+  overflow-y: auto;
 }
 th {
   font-size: 18px;
@@ -66,16 +87,22 @@ td {
 }
 
 tbody tr:nth-child(odd) td {
-  background-color: white; 
+  background-color: white;
 }
 
 tbody tr:nth-child(even) td {
-  background-color: #f2f2f2; 
+  background-color: #f2f2f2;
 }
 
 @media (min-width: 300px) and (max-width: 850px) {
   table {
     width: 90vw;
+  }
+}
+@media (max-width: 419px) {
+  table {
+    width: 100%;
+    margin-top:5%;
   }
 }
 </style>

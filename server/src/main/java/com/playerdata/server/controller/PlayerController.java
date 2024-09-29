@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.MediaType;
 
 import java.util.List;
 
@@ -21,7 +22,7 @@ public class PlayerController {
         this.playerService = playerService;
     }
 
-    @GetMapping("/")
+    @GetMapping(value = "/", produces = MediaType.APPLICATION_JSON_VALUE  + ";charset=UTF-8")
     public List<Player> findAllPlayers() {
         return playerService.findAllPlayers();
     }

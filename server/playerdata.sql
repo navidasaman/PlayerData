@@ -13,11 +13,11 @@ CREATE TABLE IF NOT EXISTS player (
 INSERT INTO player (first_name, last_name, city, birth_date) VALUES ("John", "Doe", "Gothenburg", '1995-08-12');
 INSERT INTO player (first_name, last_name, city, birth_date) VALUES ("Jane", "Smith", "Stockholm", '1992-11-05');
 INSERT INTO player (first_name, last_name, city, birth_date) VALUES ("Alice", "Brown", "Stockholm", '1991-07-23');
-INSERT INTO player (first_name, last_name, city, birth_date) VALUES ("Mike", "Johnson", "Västerås", '1992-03-22');
+INSERT INTO player (first_name, last_name, city, birth_date) VALUES ("Mike", "Johnson", "Lund", '1992-03-22');
 INSERT INTO player (first_name, last_name, city, birth_date) VALUES ("Barry", "Brown", "Kalmar", '1995-01-12');
-INSERT INTO player (first_name, last_name, city, birth_date) VALUES ("Malin", "Andersson", "Borås", '2000-12-12');
+INSERT INTO player (first_name, last_name, city, birth_date) VALUES ("Malin", "Andersson", "Visby", '2000-12-12');
 INSERT INTO player (first_name, last_name, city, birth_date) VALUES ("Peter", "Parker", "Halmstad", '1994-08-04');
 INSERT INTO player (first_name, last_name, city, birth_date) VALUES ("Boris", "Karlsson", "Kiruna", '1985-05-13');
 INSERT INTO player (first_name, last_name, city, birth_date) VALUES ("Jennifer", "Pettersson", "Stockholm", '2001-02-16');
 INSERT INTO player (first_name, last_name, city, birth_date) VALUES ("Frida", "Olsson", "Gothenburg", '1993-03-02');
-INSERT INTO player (first_name, last_name, city, birth_date) VALUES ("Kim", "Larsson", "Malmö", '1996-09-17');
+INSERT INTO player (first_name, last_name, city, birth_date) VALUES ("Kim", "Larsson", "Helsingborg", '1996-09-17');
