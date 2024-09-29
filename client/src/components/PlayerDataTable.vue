@@ -16,7 +16,7 @@
           <td>Doe</td>
           <td>Gothenburg</td>
         </tr>
-                <tr>
+        <tr>
           <td>1993-09-08</td>
           <td>John</td>
           <td>Doe</td>
@@ -45,11 +45,16 @@ table {
   border-top-right-radius: 10px;
   border-collapse: collapse;
   width: 100%;
+  width: 70vw;
 }
 th {
   font-size: 18px;
   border: none;
   font-weight: 400;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 td {
   border: none;
@@ -58,36 +63,13 @@ td {
   padding-bottom: 10px;
   background: white;
   color: grey;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
-@media (min-width: 600px) {
-  table {
-    width: 70vw;
-  }
-  th {
-    padding-top: 15px;
-    padding-bottom: 15px;
-  }
-  td {
-    border: none;
-    text-align: center;
-    padding: 10px;
-  }
-}
-
-@media (min-width: 300px) and (max-width: 599.99px) {
+@media (min-width: 300px) and (max-width: 850px) {
   table {
     width: 90vw;
-  }
- th {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-  td {
-    padding-left: 5px;
-    padding-right: 5px;
   }
 }
 </style>
