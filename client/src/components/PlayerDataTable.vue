@@ -64,7 +64,7 @@ export default {
     // Fetches the player data
     async fetchPlayers() {
       try {
-        const response = await fetch("http://localhost:8080/players");
+        const response = await fetch(`${process.env.VUE_APP_API_URL}/players`);
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
