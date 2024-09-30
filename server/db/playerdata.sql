@@ -19,8 +19,8 @@ INSERT INTO player (first_name, last_name, city, birth_date) VALUES ("Malin", "A
 INSERT INTO player (first_name, last_name, city, birth_date) VALUES ("Peter", "Parker", "Halmstad", '1994-08-04');
 INSERT INTO player (first_name, last_name, city, birth_date) VALUES ("Boris", "Karlsson", "Kiruna", '1985-05-13');
 INSERT INTO player (first_name, last_name, city, birth_date) VALUES ("Jennifer", "Pettersson", "Stockholm", '2001-02-16');
-INSERT INTO players (first_name, last_name, city, birth_date) VALUES ("Frida", "Sjögren", "Gothenburg", '1993-03-02');
-INSERT INTO players (first_name, last_name, city, birth_date) VALUES ("Kim", "Larsson", "Malmö", '1996-09-17');
+INSERT INTO player (first_name, last_name, city, birth_date) VALUES ("Frida", "Sjögren", "Gothenburg", '1993-03-02');
+INSERT INTO player (first_name, last_name, city, birth_date) VALUES ("Kim", "Larsson", "Malmö", '1996-09-17');
 
 
 

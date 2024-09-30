@@ -22,7 +22,7 @@ public class PlayerController {
         this.playerService = playerService;
     }
 
-    @GetMapping(value = "/", produces = MediaType.APPLICATION_JSON_VALUE  + ";charset=UTF-8")
+    @GetMapping
     public List<Player> findAllPlayers() {
         return playerService.findAllPlayers();
     }
