@@ -1,5 +1,6 @@
 package com.playerdata.server.service;
 
+import com.playerdata.server.exception.PlayersFetchException;
 import com.playerdata.server.model.Player;
 import com.playerdata.server.repository.PlayerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,10 @@ public class PlayerServiceImpl implements PlayerService {
 
     @Override
     public List<Player> findAllPlayers() {
-        return playerRepository.findAll();
+        List<Player> players = playerRepository.findAll();
+        if (players.isEmpty()) {
+            throw new PlayersFetchException("No players found");
+        }
+        return players;
     }
 }
