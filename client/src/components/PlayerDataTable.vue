@@ -10,6 +10,7 @@
                 icon="fa-solid fa-arrow-down"
                 style="color: white; cursor: pointer"
                 v-on:click="toggleSortingByBirthDate()"
+                title="Press for descending order"
               />
             </span>
             <span v-if="!toggledSorting">
@@ -17,6 +18,7 @@
                 icon="fa-solid fa-arrow-up"
                 style="color: white; cursor: pointer"
                 v-on:click="toggleSortingByBirthDate()"
+                title="Press for ascending order"
               />
             </span>
           </th>
@@ -62,7 +64,7 @@ export default {
     // Fetches the player data
     async fetchPlayers() {
       try {
-        const response = await fetch("http://localhost:8080/players/");
+        const response = await fetch("http://localhost:8080/players");
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -103,17 +105,18 @@ th {
   font-weight: 400;
   padding-top: 15px;
   padding-bottom: 15px;
-  padding-left: 5px;
+  padding-left: 15px;
   padding-right: 5px;
+  text-align: left;
+  width: fit-content;
 }
 td {
   border: none;
-  text-align: center;
   padding-top: 10px;
   padding-bottom: 10px;
   background: white;
   color: grey;
-  padding-left: 10px;
+  padding-left: 15px;
   padding-right: 10px;
 }
 
