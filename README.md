@@ -14,7 +14,7 @@ Prerequisites: Java 17, Maven, Docker, Spring Boot, Vue.js.
 ### Frontend: 
 - Vue.js + CSS
   
-<img width="937" alt="image" src="https://github.com/user-attachments/assets/077a3521-338a-42a1-8e2b-027561e800e6">
+<img width="949" alt="image" src="https://github.com/user-attachments/assets/1ec296bd-6225-432b-85e5-25dc341bbae4">
 
 if you hover over the icon the title shows up descibing the sorting functionality
-<img width="938" alt="image" src="https://github.com/user-attachments/assets/95034e62-1bb7-4621-a3de-c7380c5ece12">
+<img width="947" alt="image" src="https://github.com/user-attachments/assets/9ada1f73-966c-4cc8-b025-829aa490c924">
