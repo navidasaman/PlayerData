@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+  .tableHeaders {
+    @apply text-left text-xs sm:text-sm md:text-lg font-normal py-4 px-2 md:px-4 lg:pl-10;
+  }
+  .tableData {
+    @apply text-[12px] sm:text-[14px] md:text-[15px] text-left px-2 md:px-4 py-2 md:py-4 lg:pl-10;
+  }
+}
+
+html, body {
+  background: linear-gradient(45deg, #4158d0, #c850c0);
+  height:100%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
