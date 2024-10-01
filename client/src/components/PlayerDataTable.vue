@@ -10,6 +10,7 @@
                 icon="fa-solid fa-arrow-down"
                 class="cursor-pointer ml-2"
                 v-on:click="toggleSortingByBirthDate()"
+                title="Press for descending order"
               />
             </span>
             <span v-if="!toggledSorting">
@@ -17,6 +18,7 @@
                 icon="fa-solid fa-arrow-up"
                 class="cursor-pointer ml-2"
                 v-on:click="toggleSortingByBirthDate()"
+                title="Press for ascending order"
               />
             </span>
           </th>
