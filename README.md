@@ -3,12 +3,12 @@
 ## 🛠️ Installing
 ### 1. Clone the repository
 ### 2. Backend
-- Navigate to backend folder: cd server (start the application)
-- Start the server with Docker Compose using: _docker-compose up_
+- Navigate to backend folder: <code> cd server </code> (start the application)
+- Start the server with Docker Compose using: <code> _docker-compose up_ </code>
 ### 3. Frontend 
-- Navigate to frontend folder: cd client 
-- Install all the dependencies: npm install 
-- Start the developement server: _npm run serve_
+- Navigate to frontend folder: <code> cd client </code>
+- Install all the dependencies: <code> npm install</code>
+- Start the developement server: <code> _npm run serve_ </code>
 
 🛠️ Prerequisites: Java 17, Maven, Docker, Spring Boot, Vue.js.
 
