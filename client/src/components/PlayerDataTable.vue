@@ -4,7 +4,7 @@
       <thead>
         <tr>
           <th class="tableHeaders">
-            Birth date
+            Birth Date
             <span v-if="toggledSorting">
               <font-awesome-icon
                 icon="fa-solid fa-arrow-down"
