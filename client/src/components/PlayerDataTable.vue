@@ -1,38 +1,36 @@
 <template>
-  <div>
-    <table>
+  <div class="w-full flex justify-center font-sans text-left sm:p-0 p-4">
+    <table class="bg-[#36304a] text-white rounded-t-lg w-full sm:w-[80vw] shadow-lg mt-12 mb-10" >
       <thead>
         <tr>
-          <th>
+          <th class="tableHeaders">
             Birth date
             <span v-if="toggledSorting">
               <font-awesome-icon
                 icon="fa-solid fa-arrow-down"
-                style="color: white; cursor: pointer"
+                class="cursor-pointer ml-2"
                 v-on:click="toggleSortingByBirthDate()"
-                title="Press for descending order"
               />
             </span>
             <span v-if="!toggledSorting">
               <font-awesome-icon
                 icon="fa-solid fa-arrow-up"
-                style="color: white; cursor: pointer"
+                class="cursor-pointer ml-2"
                 v-on:click="toggleSortingByBirthDate()"
-                title="Press for ascending order"
               />
             </span>
           </th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>City</th>
+          <th class="tableHeaders">First Name</th>
+          <th class="tableHeaders">Last Name</th>
+          <th class="tableHeaders">City</th>
         </tr>
       </thead>
       <tbody>
-        <tr v-for="player in sortedPlayers" :key="player.id">
-          <td>{{ player.birth_date }}</td>
-          <td>{{ player.first_name }}</td>
-          <td>{{ player.last_name }}</td>
-          <td>{{ player.city }}</td>
+        <tr v-for="player in sortedPlayers" :key="player.id" class="odd:bg-gray-100 even:bg-white text-gray-500">
+          <td class="tableData">{{ player.birth_date }}</td>
+          <td class="tableData">{{ player.first_name }}</td>
+          <td class="tableData">{{ player.last_name }}</td>
+          <td class="tableData">{{ player.city }}</td>
         </tr>
       </tbody>
     </table>
@@ -47,7 +45,8 @@ export default {
       toggledSorting: true,
     };
   },
-  async mounted() {            // After page has loaded (mounted)
+  async mounted() {
+    // After page has loaded (mounted)
     await this.fetchPlayers(); //  the fetchPlayers method will run
   },
   computed: {
@@ -82,63 +81,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
-
-table {
-  background: #36304a;
-  font-family: "Open Sans";
-  color: white;
-  border: none;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  border-collapse: collapse;
-  width: 100%;
-  width: 70vw;
-  overflow-y: auto;
-  margin: auto;
-}
-th {
-  font-size: 18px;
-  border: none;
-  font-weight: 400;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 15px;
-  padding-right: 5px;
-  text-align: left;
-  width: fit-content;
-}
-td {
-  border: none;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background: white;
-  color: grey;
-  padding-left: 15px;
-  padding-right: 10px;
-}
-
-tbody tr:nth-child(odd) td {
-  background-color: white;
-}
-
-tbody tr:nth-child(even) td {
-  background-color: #f2f2f2;
-}
-
-@media (min-width: 411px) and (max-width: 850px) {
-  table {
-    width: 90vw;
-    overflow-y: auto;
-  }
-}
-
-@media (min-width: 300px) and (max-width: 409.99px) {
-  table {
-    width: 90vw;
-    margin-top: calc(37%);
-  }
-}
-</style>
