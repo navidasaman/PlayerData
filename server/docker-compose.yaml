@@ -6,6 +6,7 @@ services:
     environment:
       - MYSQL_DATABASE=playersdb
       - MYSQL_ROOT_PASSWORD=saman
+      - LANG=C.UTF-8
     ports:
       - "3307:3306"
     volumes:
