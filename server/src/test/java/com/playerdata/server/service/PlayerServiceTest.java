@@ -29,7 +29,7 @@ public class PlayerServiceTest {
     }
 
     @Test
-    public void getPlayersTest() {
+    public void testFindAllPlayers_whenListContainsPlayers_shouldReturnCorrectPlayerList() {
         Player player1 = new Player(1L, "Fredrik", "Karlsson", "Stockholm", LocalDate.of(1999, 3, 20));
         Player player2 = new Player(2L, "Emma", "Persson", "Uppsala", LocalDate.of(1989, 12, 14));
         List<Player> mockPlayers = Arrays.asList(player1, player2);
