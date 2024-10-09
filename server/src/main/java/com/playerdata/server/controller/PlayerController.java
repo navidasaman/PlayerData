@@ -13,7 +13,6 @@ import java.util.List;
 
 @RestController // to handle HTTP requests and returning JSON-data
 @RequestMapping("/players") // maps the url
-@CrossOrigin // (will update with origin later)
 public class PlayerController {
     private final PlayerService playerService;
 
