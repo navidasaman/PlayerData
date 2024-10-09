@@ -14,7 +14,7 @@ public class GlobalExceptionHandler {
     public final ResponseEntity<ErrorResponse> handlePlayersFetchException(PlayersFetchException e) {
         ErrorResponse errorResponse = ErrorResponse.builder()
                 .timestamp(LocalDateTime.now())
-                .status(HttpStatus.INTERNAL_SERVER_ERROR.value())
+                .status(HttpStatus.BAD_REQUEST.value())
                 .message(e.getMessage())
                 .build();
         return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
