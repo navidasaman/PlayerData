@@ -30,7 +30,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="player in players" :key="player.id" class="odd:bg-gray-100 even:bg-white text-gray-500">
+        <tr v-for="player in sortedPlayersList" :key="player.id" class="odd:bg-gray-100 even:bg-white text-gray-500">
           <td class="tableData">{{ player.birth_date }}</td>
           <td class="tableData">{{ player.first_name }}</td>
           <td class="tableData">{{ player.last_name }}</td>
@@ -45,7 +45,7 @@
 export default {
   // Recieving props from the parent component 'PlayersData' describing its type and that it is required 
   props: {
-    players: {
+    sortedPlayersList: {
       type: Array,
       required: true,
     },

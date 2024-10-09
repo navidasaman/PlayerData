@@ -2,7 +2,7 @@
   <div>
     <!-- v-bind prop binding & passing data to child component PlayerDataTable -->
     <PlayerDataTable      
-      :players="sortedPlayers" 
+      :sortedPlayersList="sortedPlayers" 
       :toggledSorting="toggledSorting" 
       @toggleSortingByDOB="toggleSortingByBirthDate"
     />
