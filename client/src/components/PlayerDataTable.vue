@@ -7,20 +7,12 @@
         <tr>
           <th class="tableHeaders">
             Birth Date
-            <span v-if="toggledSorting">
+            <span>
               <font-awesome-icon
-                icon="fa-solid fa-arrow-down"
+                :icon="toggledSorting ? 'fa-solid fa-arrow-down' : 'fa-solid fa-arrow-up'"
                 class="cursor-pointer ml-2"
                 @click="toggleSortingByDOB" 
-                title="Press for descending order"
-              />
-            </span>
-            <span v-if="!toggledSorting">
-              <font-awesome-icon
-                icon="fa-solid fa-arrow-up"
-                class="cursor-pointer ml-2"
-                @click="toggleSortingByDOB" 
-                title="Press for ascending order"
+                :title="toggledSorting ? 'Press for descending order' : 'Press for ascending order'"
               />
             </span>
           </th>
