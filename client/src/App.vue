@@ -1,14 +1,14 @@
 <template>
-    <PlayerDataTable />
+    <PlayersData />
 </template>
 
 <script>
-import PlayerDataTable from './components/PlayerDataTable.vue'
+import PlayersData from './components/PlayersData.vue'
 
 export default {
   name: 'App',
   components: {
-    PlayerDataTable
+    PlayersData
   }
 }
 </script>
