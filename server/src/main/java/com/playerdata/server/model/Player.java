@@ -17,7 +17,6 @@ import java.time.LocalDate;
 public class Player {
     @GeneratedValue(strategy = GenerationType.IDENTITY) // auto-increments the id value in the database
     @Id // Denotes that the id is the primary key
-    @JsonIgnore // This will exclude the id from the json response while still uniquely identifying the player
     private Long id;
     private String first_name;
     private String last_name;
