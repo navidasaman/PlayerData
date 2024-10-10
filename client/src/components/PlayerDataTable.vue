@@ -1,8 +1,6 @@
 <template>
   <div class="w-full flex justify-center font-sans text-left sm:p-0 p-4">
-    <table
-      class="bg-[#36304a] text-white rounded-t-lg w-full sm:w-[80vw] shadow-lg mt-12 mb-10"
-    >
+    <table class="bg-[#36304a] text-white rounded-t-lg w-full sm:w-[80vw] shadow-lg mt-12 mb-10">
       <thead>
         <tr>
           <th class="tableHeaders">
